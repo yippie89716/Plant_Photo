@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>My Photos</title>
+</head>
+<body>
+    <h1>My Photos</h1>
+    <table>
+        <tr>
+            <!--<th>File Name</th>-->
+            <th>Save Time</th>
+            <th>Image</th>
+            </tr>
+            {% for image in image_data %}
+        <tr>
+            <!--<td>{{ image['file_name'] }}</td>-->
+            <td>{{ image['save_time'] }}</td>
+            <td><img width="640" height="480" alt="" src=" data:image/png;base64,{{ image['img_data'] }}"/> </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+    </html>
